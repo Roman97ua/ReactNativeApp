@@ -7,11 +7,11 @@ import {
     ActivityIndicator,
     Modal,
     Image,
-    TouchableOpacity
+    TouchableOpacity,
+    Text
 } from 'react-native'
 
 export class Gallery extends React.Component {
-
 
 constructor()
     {
@@ -61,6 +61,7 @@ constructor()
                         <View style={{flex:1, flexDirection: 'column', margin:1 }}>
                             <TouchableOpacity onPress={this.ShowModalFunction.bind(this, true, item.urls.thumb)} >
                                 <Image style={styles.imageThumbnail} source = {{ uri: item.urls.thumb }}/>
+                                <Text>{item.user.username}</Text>
                             </TouchableOpacity>
 
                         </View>
